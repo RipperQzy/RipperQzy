@@ -6,16 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>文章分类 | 曲正阳</title>
+  <title>依靠GitHub搭建博客服务 | 曲正阳</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="文章分类">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+  <meta name="description" content="GitHub创建个人仓库  首先，你先要有一个GitHub账户，去注册一个吧。 注册完登录后，在GitHub.com中看到一个New repository，新建仓库 创建一个和你用户名相同的仓库，后面加.github.io，只有这样，将来要部署到GitHub page的时候，才会被识别,也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名。我这里是已经建过了。 点击cre">
+<meta property="og:type" content="article">
+<meta property="og:title" content="依靠GitHub搭建博客服务">
+<meta property="og:url" content="http://yoursite.com/2020/04/17/%E4%BE%9D%E9%9D%A0GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%9C%8D%E5%8A%A1/index.html">
 <meta property="og:site_name" content="曲正阳">
+<meta property="og:description" content="GitHub创建个人仓库  首先，你先要有一个GitHub账户，去注册一个吧。 注册完登录后，在GitHub.com中看到一个New repository，新建仓库 创建一个和你用户名相同的仓库，后面加.github.io，只有这样，将来要部署到GitHub page的时候，才会被识别,也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名。我这里是已经建过了。 点击cre">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-04-17T05:21:26.000Z">
-<meta property="article:modified_time" content="2020-04-17T05:29:00.031Z">
+<meta property="article:published_time" content="2020-04-17T06:03:40.000Z">
+<meta property="article:modified_time" content="2020-04-17T06:12:26.116Z">
 <meta property="article:author" content="曲正阳">
+<meta property="article:tag" content="Github Hexo">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="曲正阳" type="application/atom+xml">
@@ -138,27 +141,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-依靠GitHub搭建博客服务" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      文章分类
+      依靠GitHub搭建博客服务
     </h1>
   
 
         
-        <a href="/categories/index.html" class="archive-article-date">
-  	<time datetime="2020-04-17T05:21:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-17</time>
+        <a href="/2020/04/17/%E4%BE%9D%E9%9D%A0GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%9C%8D%E5%8A%A1/" class="archive-article-date">
+  	<time datetime="2020-04-17T06:03:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <blockquote>
+<p>GitHub创建个人仓库</p>
+</blockquote>
+<p>首先，你先要有一个GitHub账户，去注册一个吧。</p>
+<p>注册完登录后，在GitHub.com中看到一个New repository，新建仓库</p>
+<p>创建一个和你用户名相同的仓库，后面加.github.io，只有这样，将来要部署到GitHub page的时候，才会被识别,也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名。我这里是已经建过了。</p>
+<p>点击create repository。</p>
+<a id="more"></a>
+<blockquote>
+<p>生成SSH添加到GitHub</p>
+</blockquote>
+<p>回到你的git bash中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br><span class="line">&#x2F;&#x2F;这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。这样GitHub才能知道你是不是对应它的账户。可以用以下两条，检查一下你有没有输对</span><br><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br><span class="line">&#x2F;&#x2F;然后创建SSH,一路回车</span><br><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br><span class="line">&#x2F;&#x2F;这里需要你输入一个密码。键入密码完成后返回一个地址</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>将hexo部署到GitHub</p>
+</blockquote>
+<p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 _config.yml，翻到最后，修改为<br>YourgithubName就是你的GitHub账户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;YourgithubName&#x2F;YourgithubName.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>这个时候需要先安装deploy-git，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">&#x2F;&#x2F;安装完成后</span><br><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>其中 hexo clean清除了你之前生成的东西，也可以不加。<br>hexo generate 顾名思义，生成静态文章，可以用 hexo g缩写<br>hexo deploy 部署文章，可以用hexo d缩写</p>
+<p>注意deploy时可能要你输入username和password。<br>过一会儿就可以在<a href="http://yourname.github.io" target="_blank" rel="noopener">http://yourname.github.io</a> 这个网站看到你的博客了。</p>
+
       
 
       
@@ -166,6 +191,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Github Hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -177,6 +213,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/17/%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo博客搭建（windows</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -202,8 +248,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/categories/index.html", 
-    sourceId: "",
+    url: "http://yoursite.com/2020/04/17/%E4%BE%9D%E9%9D%A0GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%9C%8D%E5%8A%A1/", 
+    sourceId: "依靠GitHub搭建博客服务",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
@@ -216,6 +262,7 @@
   
 
   
+
 
 
           </div>
@@ -255,7 +302,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
